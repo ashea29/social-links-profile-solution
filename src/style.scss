@@ -8,14 +8,14 @@
 
 :root {
   // Colors - Light Theme
-  --bg-body: hsl(212, 45%, 89%);
-  --bg-card: hsl(0, 0%, 100%);
-  --color-primary: hsl(216, 95%, 58%);
-  --text-color-primary: hsl(216, 15%, 48%);
-  --text-color-heading: hsl(218, 44%, 22%);
+  --bg-body: hsl(0, 0%, 8%);
+  --bg-card: hsl(0, 0%, 12%);
+  --color-primary: hsl(75, 94%, 57%);
+  --text-color-primary: hsl(0, 0%, 100%);
+  --text-color-accent: hsl(75, 94%, 57%);
 
   // Fonts
-  --font-primary: "Outfit", sans-serif;
+  --font-primary: "Inter", sans-serif;
 
   // Sizes
   --xsmall: 1rem;
