@@ -1,0 +1,140 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  // Colors - Light Theme
+  --bg-body: hsl(212, 45%, 89%);
+  --bg-card: hsl(0, 0%, 100%);
+  --color-primary: hsl(216, 95%, 58%);
+  --text-color-primary: hsl(216, 15%, 48%);
+  --text-color-heading: hsl(218, 44%, 22%);
+
+  // Fonts
+  --font-primary: "Outfit", sans-serif;
+
+  // Sizes
+  --xsmall: 1rem;
+  --small: 3rem;
+  --medium: 6rem;
+  --large: 9rem;
+  --xlarge: 12rem;
+  --xxlarge: 18rem;
+  --maxwidth: 87.5rem;
+
+  // Spacing
+  --half: 0.5rem;
+  --space-1: 1rem;
+  --space-1-5: 1.5rem;
+  --space-2: 2rem;
+  --space-2-5: 2.5rem;
+  --space-3: 3rem;
+  --space-3-5: 3.5rem;
+  --space-4: 4rem;
+  --space-4-5: 4.5rem;
+  --space-5: 5rem;
+  --space-5-5: 5.5rem;
+  --space-6: 6rem;
+
+  // Radius
+  --radius-2: 0.125rem;
+  --radius-4: 0.25rem;
+  --radius-8: 0.5rem;
+  --radius-16: 1rem;
+  --radius-24: 1.5rem;
+  --radius-round: 50%;
+
+  // Transitions
+  --transition-1: all 300ms ease-in-out, border 1ms;
+}
+
+* {
+  transition: var(--transition-1);
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-row-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.dark-theme {
+// Colors - Dark Theme
+}
+
+body {
+  background-color: var(--bg-body);
+  font-family: var(--font-primary);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.container {
+  @include flex-column-center;
+  min-height: 100vh;
+  gap: var(--space-2-5);
+}
+
+.main {
+  @include flex-row-center;
+  gap: var(--space-2);
+  width: min(100vw - 2rem, 57.5rem);
+  min-height: 100%;
+  margin-inline: auto;
+  background-color: var(--bg-main);
+  border-radius: var(--radius-24);
+  padding: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.theme-toggle {
+  cursor: pointer;
+}

@@ -1,0 +1,24 @@
+{
+  "name": "frontend-mentor-solution-template",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "a11y": "concurrently -P \"pnpm dev\" \"node ./utils/pa11y/runA11yCheck.cjs {@}\""
+  },
+  "devDependencies": {
+    "@dotenvx/dotenvx": "latest",
+    "chalk": "latest",
+    "concurrently": "latest",
+    "open-props": "latest",
+    "pa11y": "latest",
+    "postcss": "latest",
+    "postcss-cli": "latest",
+    "postcss-jit-props": "latest",
+    "postcss-preset-env": "latest",
+    "sass": "latest",
+    "vite": "latest"
+  }
+}

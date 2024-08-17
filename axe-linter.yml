@@ -1,0 +1,10 @@
+# FOR 'AXE ACCESSIBILITY LINTER' VSCODE PLUGIN
+
+exclude:
+  - "node_modules/**/*.html"
+  - "./utils/**/**/*.html"
+
+tags:
+  - wcag21a
+  - wcag21aa
+  - best-practices
