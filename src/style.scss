@@ -10,6 +10,7 @@
   // Colors - Light Theme
   --bg-body: hsl(0, 0%, 8%);
   --bg-card: hsl(0, 0%, 12%);
+  --bg-card-link: hsl(0, 0%, 20%);
   --color-primary: hsl(75, 94%, 57%);
   --text-color-primary: hsl(0, 0%, 100%);
   --text-color-accent: hsl(75, 94%, 57%);
@@ -44,6 +45,7 @@
   --radius-2: 0.125rem;
   --radius-4: 0.25rem;
   --radius-8: 0.5rem;
+  --radius-12: 0.75rem;
   --radius-16: 1rem;
   --radius-24: 1.5rem;
   --radius-round: 50%;
@@ -102,7 +104,7 @@
 }
 
 .dark-theme {
-// Colors - Dark Theme
+  // Colors - Dark Theme
 }
 
 body {
@@ -132,9 +134,89 @@ body {
   background-color: var(--bg-main);
   border-radius: var(--radius-24);
   padding: var(--space-2);
-  margin-bottom: var(--space-3);
 }
 
-.theme-toggle {
-  cursor: pointer;
+.profile-card,
+.profile-card__user-social-links {
+  @include flex-column;
+  align-items: center;
+}
+
+.profile-card {
+  gap: var(--space-2);
+  max-width: 384px;
+  padding: 1.5rem;
+  background-color: var(--bg-card);
+  border-radius: var(--radius-12);
+  color: var(--text-color-primary);
+
+  &__user-img {
+    border-radius: var(--radius-round);
+    overflow: hidden;
+    width: 88px;
+    aspect-ratio: 1 / 1;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__user-name, &__user-location, &__user-headline {
+    line-height: 150%;
+    text-align: center;
+  }
+
+  &__user-location, &__user-headline {
+    font-size: 0.875rem;
+  }
+
+  &__user-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  &__user-location {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--text-color-accent);
+  }
+
+  &__user-social-links {
+    gap: var(--space-1);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+
+    li {
+      padding: 0.75rem;
+      border-radius: var(--radius-8);
+      background-color: var(--bg-card-link);
+      width: 100%;
+      text-align: center;
+    }
+
+    li:hover {
+      background-color: var(--color-primary);
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--text-color-primary);
+      font-weight: 700;
+    }
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .profile-card {
+    max-width: 456px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .profile-card {
+    max-width: 327px;
+  }
 }
