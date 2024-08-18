@@ -10,34 +10,31 @@ This is my solution to the [Social Links Profile challenge on Frontend Mentor](h
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
 - [Author](#author)
 
 ## Overview
 
 ### The challenge
 
-Users should be able to:
+This challenge was to build out a simple social profile card. Users should be able to:
 
-- View the optimal layout for the app depending on their device's screen size
 - See hover states for all interactive elements on the page
-- Calculate the correct tip and total cost of the bill per person
 
 ### Screenshot
-As an added challenge, I decided to create a theme toggle for this project. I added a separate set of color variables closely related to those for the default theme, and a button to switch between themes:
+Below are screenshots for both the main and hover-state:
 
-**Light Theme**
+**Main**
 
-![Light theme screenshot](#)
+![Main screenshot](/main-screenshot.png)
 
-**Dark Theme**
+**Hover State**
 
-![Dark theme screenshot](#)
+![Hover state screenshot](/hover-state-screenshot.png)
 
 ### Links
 
-- Solution URL: [GitHub repo](#)
-- Live Site URL: [https://live-site-url.com](#)
+- Solution URL: [GitHub repo](https://github.com/ashea29/social-links-profile-solution)
+- Live Site URL: [https://social-links-profile-solution-ajs.netlify.app/](https://social-links-profile-solution-ajs.netlify.app/)
 
 ## My process
 
@@ -47,14 +44,11 @@ As an added challenge, I decided to create a theme toggle for this project. I ad
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
 - Sass mixins
 - Custom script to check accessibility (using [pa11y](https://github.com/pa11y/pa11y))
-
-### What I learned
-In this challenge, I was able to get some more practice (always a good thing!) writing semantic HTML, as well as using the BEM naming convention for CSS classes.
-
-Additionally, I was able to solidify a strategy I intend to use, going forward, for creating a maintainable light-theme/dark-theme toggle.
+  ```bash
+  pnpm a11y -- Social Links Profile Solution
+  ```
 
 ## Author
 
