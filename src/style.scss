@@ -133,24 +133,25 @@ body {
   margin-inline: auto;
   background-color: var(--bg-main);
   border-radius: var(--radius-24);
-  padding: var(--space-2);
 }
 
 .profile-card,
-.profile-card__user-social-links {
+.profile-card__user,
+.profile-card__user__info,
+.profile-card__user__social-links {
   @include flex-column;
   align-items: center;
 }
 
 .profile-card {
   gap: var(--space-2);
-  max-width: 384px;
-  padding: 1.5rem;
+  width: min(calc(100% - 2rem), 384px);
+  padding: 2.5rem;
   background-color: var(--bg-card);
   border-radius: var(--radius-12);
   color: var(--text-color-primary);
 
-  &__user-img {
+  &__img {
     border-radius: var(--radius-round);
     overflow: hidden;
     width: 88px;
@@ -162,27 +163,35 @@ body {
     }
   }
 
-  &__user-name, &__user-location, &__user-headline {
+  &__user {
+    gap: 1.5rem;
+  }
+
+  &__user__info {
+    gap: 0.25rem;
+  }
+
+  &__user__name, &__user__location, &__user__bio {
     line-height: 150%;
     text-align: center;
   }
 
-  &__user-location, &__user-headline {
+  &__user__location, &__user__bio {
     font-size: 0.875rem;
   }
 
-  &__user-name {
+  &__user__name {
     font-size: 1.5rem;
     font-weight: 600;
   }
 
-  &__user-location {
+  &__user__location {
     font-size: 0.875rem;
     font-weight: 700;
     color: var(--text-color-accent);
   }
 
-  &__user-social-links {
+  &__user__social-links {
     gap: var(--space-1);
     list-style: none;
     padding: 0;
@@ -190,15 +199,27 @@ body {
     width: 100%;
 
     li {
-      padding: 0.75rem;
+      
       border-radius: var(--radius-8);
       background-color: var(--bg-card-link);
       width: 100%;
       text-align: center;
+
+      a {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        padding: 0.75rem;
+      }
     }
 
     li:hover {
       background-color: var(--color-primary);
+      cursor: pointer;
+      
+      a {
+        color: var(--bg-card-link);
+      }
     }
 
     a {
@@ -209,14 +230,15 @@ body {
   }
 }
 
-@media screen and (max-width: 770px) {
+@media screen and (min-width: 381px) and (max-width: 770px) {
   .profile-card {
-    max-width: 456px;
+    min-width: 456px;
   }
 }
 
 @media screen and (max-width: 380px) {
   .profile-card {
-    max-width: 327px;
+    min-width: 327px;
+    padding: 1.5rem;
   }
 }
